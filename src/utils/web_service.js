@@ -12,8 +12,8 @@ class WS {
 
         if (isAuthenticated())
             args.headers['Authorization'] = `Bearer ${cookies.get(COOKIE_NAME)}`;
-        else
-            args.headers['Client-ID'] = TWITCH_CLIENT_ID
+            
+        args.headers['Client-ID'] = TWITCH_CLIENT_ID
 
         return args;
     }
